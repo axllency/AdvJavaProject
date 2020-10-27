@@ -8,14 +8,16 @@
 package music.facade;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-import music.services.SpotifyService;
+import music.service.SpotifyService;
 
 /**
  * ApplicationFacade
  * 
  * The Music Application Facade Implementation for access to all services.
  */
+@Component
 public class ApplicationFacadeImpl implements ApplicationFacade {
 	
 	@Autowired
