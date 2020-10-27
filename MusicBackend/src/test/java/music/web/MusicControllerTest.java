@@ -29,7 +29,7 @@ public class MusicControllerTest {
 		String content = "";
 		
 		//build request
-		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("music/favorites")
+		MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.put("/music/favorites")
 				.accept(MediaType.APPLICATION_JSON)
 				.contentType(MediaType.APPLICATION_JSON)
 				.content(content);
@@ -51,5 +51,7 @@ public class MusicControllerTest {
 //			//return response 
 //			.andReturn();
 		
+		//since there's no actual test right now
+		assert(true);
 	}
 }
