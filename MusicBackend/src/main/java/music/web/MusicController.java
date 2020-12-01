@@ -7,12 +7,22 @@
  */
 package music.web;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import music.facade.ApplicationFacade;
+import music.model.Vinyl;
 
 @RestController
 @CrossOrigin("*")
@@ -22,10 +32,24 @@ public class MusicController {
 	@Autowired
 	private ApplicationFacade facade;
 	
-	//Need a C/U method that takes the contents of spotify queries. Object per query? Or leave as Json
-	//Read: will need db queries for different params: artist/album by song name/ etc
-	//delete update that deletes all of a user's information
+	@PostMapping(path="vinyl")
+	public Vinyl createVinyl(@Validated @RequestBody Vinyl vinyl) {
+		return facade.createVinyl(vinyl);
+	}
 	
+	@GetMapping(path="vinyl")
+	public List<Vinyl> getVinyls() {
+		return facade.getVinyls();
+	}
 	
+	@PutMapping(path="vinyl/{id}")
+	public Vinyl updateVinyl(@PathVariable("id") Integer id, @Validated @RequestBody Vinyl vinyl) {
+		return facade.updateVinyl(vinyl, id);
+	}
+	
+	@DeleteMapping(path="vinyl/{id}")
+	public void deleteVinyl(@PathVariable("id") Integer id) {
+		facade.deleteVinylById(id);
+	}
 	
 }

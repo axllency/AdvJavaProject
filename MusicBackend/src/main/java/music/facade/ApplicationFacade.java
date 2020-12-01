@@ -7,6 +7,10 @@
  */
 package music.facade;
 
+import java.util.List;
+
+import music.model.Vinyl;
+
 /**
  * ApplicationFacade
  * 
@@ -17,4 +21,14 @@ package music.facade;
  */
 public interface ApplicationFacade {
 
+	public Vinyl createVinyl(Vinyl vinyl);
+	
+	public List<Vinyl> getVinyls();
+	
+	public Vinyl updateVinyl(Vinyl vinyl, Integer id);
+	
+	public void deleteVinylById(Integer id);
+	
+	public void deleteVinylByEntity(Vinyl vinyl);
+	
 }
