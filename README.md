@@ -3,8 +3,4 @@ Class project for Advanced Java Programming
 
 Abstract for project:
 
-Tentative plan:
-
-Angular web client to interact with spotify api and visualize data for a spotify user
-
-Spring boot application to store a user's data in a mysql database, and perform other operations on the data
+The purpose of this project is to enable a user to store digital information regarding their personal vinyl record collection. Users can input their data via angular web client, and the vinyl record information will be stored in a database using a spring boot backend.
