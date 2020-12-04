@@ -8,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class UpdateVinylComponent implements OnInit {
 
   constructor() { }
+  id: any;
+  title: any;
+  artist: any;
+  releaseDate: any;
+  serial: any;
+  recordLabel: any;
+  vinylcondition: any;
 
   ngOnInit(): void {
   }
 
+  updateVinyl(id,title, artist,releaseDate, serial, recordLabel, vinylcondition){
+
+  }
 }

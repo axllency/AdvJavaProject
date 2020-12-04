@@ -7,6 +7,7 @@ import { CreateVinylComponent } from './create-vinyl/create-vinyl.component';
 import { UpdateVinylComponent } from './update-vinyl/update-vinyl.component';
 import { DeleteVinylComponent } from './delete-vinyl/delete-vinyl.component';
 import { FindVinylComponent } from './find-vinyl/find-vinyl.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FindVinylComponent } from './find-vinyl/find-vinyl.component';
     FindVinylComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

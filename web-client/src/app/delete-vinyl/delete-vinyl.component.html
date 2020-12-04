@@ -1,1 +1,22 @@
-<p>delete-vinyl works!</p>
+<div class="main-container">
+    <div class="form center">
+        <div class="col-sm-6 m-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Delete Vinyl</h2>
+                    <ul>
+                        <li>Create the perfect vinyl collection of your dream today.</li>
+                        <li>Enter you vinly Id.</li>
+                    </ul>
+                    <div>
+                        <div class="form-group">
+                            <label >Album Id</label>
+                            <input type="number" class="form-control" [(ngModel)]="id">
+                        </div>
+                        <button class="btn btn-primary" (click)="deleteVinyl(id)">Submit</button>
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

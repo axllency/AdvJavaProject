@@ -9,7 +9,12 @@ export class DeleteVinylComponent implements OnInit {
 
   constructor() { }
 
+  id: any;
+
   ngOnInit(): void {
   }
 
+  deleteVinyl(id){
+
+  }
 }
