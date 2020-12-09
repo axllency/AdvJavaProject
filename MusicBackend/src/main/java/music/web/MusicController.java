@@ -52,4 +52,8 @@ public class MusicController {
 		facade.deleteVinylById(id);
 	}
 	
+	@GetMapping(path="vinyl/{id}")
+	public Vinyl getVinylById(@PathVariable("id") Integer id) {
+		return facade.getVinylById(id);
+	}
 }

@@ -30,5 +30,7 @@ public interface ApplicationFacade {
 	public void deleteVinylById(Integer id);
 	
 	public void deleteVinylByEntity(Vinyl vinyl);
+
+	public Vinyl getVinylById(Integer id);
 	
 }

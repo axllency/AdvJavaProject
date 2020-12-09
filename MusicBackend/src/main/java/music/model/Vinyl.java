@@ -33,7 +33,7 @@ public class Vinyl {
 	private String artist;
 	
 	//album release date
-	private int releaseDate;
+	private String releaseDate;
 	//album serial code
 	private String serial;
 	//publishing record label
