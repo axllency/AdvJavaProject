@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/vinyl.service';
 
 @Component({
   selector: 'app-delete-vinyl',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteVinylComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vinyService: ApiService) { }
 
   id: any;
 
   ngOnInit(): void {
   }
 
-  deleteVinyl(id){
-
+  deleteVinyl(id:any){
+    this.vinyService.deleteVinyl(id)
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vinyl } from '../services/Vinyl';
+import { ApiService } from '../services/vinyl.service';
 
 @Component({
   selector: 'app-update-vinyl',
@@ -7,19 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateVinylComponent implements OnInit {
 
-  constructor() { }
-  id: any;
-  title: any;
-  artist: any;
-  releaseDate: any;
-  serial: any;
-  recordLabel: any;
-  vinylcondition: any;
+  constructor(private vinyService: ApiService) { }
+  vinyl : Vinyl;
 
   ngOnInit(): void {
   }
 
-  updateVinyl(id,title, artist,releaseDate, serial, recordLabel, vinylcondition){
+  getVinyl(id:any){
+    this.vinyService.getVinyl(id).subscribe(data =>{
+      this.vinyl = data
+    })
+  }
 
+  updateVinyl(id:any){
+    this.vinyService.updateVinyl(id,this.vinyl)
   }
 }

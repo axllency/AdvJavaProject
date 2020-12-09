@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vinyl } from '../services/Vinyl';
+import { ApiService } from '../services/vinyl.service';
 
 @Component({
   selector: 'app-find-vinyl',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindVinylComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vinyService: ApiService) { }
 
+  vinyls: Vinyl[];
   ngOnInit(): void {
+    this.getAllVinyls();
   }
-
+  getAllVinyls(){
+    this.vinyService.getAllVinyls().subscribe(data =>{
+      this.vinyls = data
+    })
+  }
 }

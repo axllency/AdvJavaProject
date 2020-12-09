@@ -8,6 +8,7 @@ import { UpdateVinylComponent } from './update-vinyl/update-vinyl.component';
 import { DeleteVinylComponent } from './delete-vinyl/delete-vinyl.component';
 import { FindVinylComponent } from './find-vinyl/find-vinyl.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     FindVinylComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule

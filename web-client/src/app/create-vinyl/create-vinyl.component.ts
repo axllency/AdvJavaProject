@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Vinyl } from '../services/Vinyl'
+import { ApiService } from '../services/vinyl.service'
 @Component({
   selector: 'app-create-vinyl',
   templateUrl: './create-vinyl.component.html',
@@ -7,18 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateVinylComponent implements OnInit {
 
-  constructor() { }
+  constructor(private vinyService: ApiService) { }
 
-  title: any;
-  artist: any;
-  releaseDate: any;
-  serial: any;
-  recordLabel: any;
-  vinylcondition: any;
+  vinyl = new Vinyl();
+
   ngOnInit(): void {
   }
-  createVinyl(title,artist,releaseDate,serial,recordLabel,vinylcondition){
-    console.log(vinylcondition)
+  createVinyl(){
+    console.log(this.vinyl)
+    this.vinyService.addVinyl(this.vinyl)
   }
 
 }

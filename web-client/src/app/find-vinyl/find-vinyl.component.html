@@ -1,1 +1,20 @@
-<p>find-vinyl works!</p>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- repeat this--> 
+            <div class="col-md-4" *ngFor="let v of vinyls">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">{{v.title}}</h5>
+                        <p class="card-text">Artist: {{v.artist}}</p>
+                        <p class="card-text">Release Date: {{v.releaseDate}}</p>
+                        <p class="card-text">Serial Code: {{v.serial}}</p>
+                        <p class="card-text">Record Label: {{v.recordLabel}}</p>
+                        <p class="card-text">Vinyl Condition: {{v.vinylcondition}}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- dsfsdf-->
+        </div>
+    </div>
+</div>
