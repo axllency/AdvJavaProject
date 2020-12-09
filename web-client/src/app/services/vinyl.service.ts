@@ -17,7 +17,7 @@ export class ApiService {
         return this.http.get<Vinyl[]>(this.url + 'vinyl')
     }
     getVinyl(id:any): Observable<Vinyl>{
-        return this.http.get<Vinyl>(this.url+'vinyl'+id)
+        return this.http.get<Vinyl>(this.url+'vinyl/'+id)
     }
     addVinyl(vinyl:Vinyl){
         const headers = { 'content-type': 'application/json'}  
