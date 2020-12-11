@@ -35,9 +35,9 @@ public class Vinyl {
 	//album release date
 	private String releaseDate;
 	//album serial code
-	private String serial;
+	private String serialCode;
 	//publishing record label
 	private String recordLabel;
 	//album condition
-	private String condition;
+	private String recordCondition;
 }
