@@ -47,4 +47,9 @@ public class ApplicationFacadeImpl implements ApplicationFacade {
 	public void deleteVinylByEntity(Vinyl vinyl) {
 		vinylService.deleteVinylByEntity(vinyl);
 	}
+	
+	@Override
+	public Vinyl getVinylById(Integer id) {
+		return vinylService.getVinylById(id);
+	}
 }

@@ -1,6 +1,7 @@
 package music.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,5 +34,14 @@ public class VinylService {
 		
 		public void deleteVinylByEntity(Vinyl vinyl) {
 			vinylRepository.delete(vinyl);
+		}
+		
+		public Vinyl getVinylById(Integer id) {
+			Optional<Vinyl> vinylOpt = vinylRepository.findById(id);
+			if(vinylOpt.isPresent()) {
+				return vinylOpt.get();
+			} else {
+				return null;
+			}
 		}
 }
