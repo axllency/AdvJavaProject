@@ -23,6 +23,6 @@ export class UpdateVinylComponent implements OnInit {
   }
 
   updateVinyl(id:any){
-    this.vinyService.updateVinyl(id,this.vinyl)
+    this.vinyService.updateVinyl(id,this.vinyl).subscribe()
   }
 }

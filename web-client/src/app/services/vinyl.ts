@@ -1,9 +1,9 @@
 export class Vinyl {
     id: any;
-    title: any;
+    albumTitle: any;
     artist: any;
     releaseDate: any;
-    serial: any;
+    serialCode: any;
     recordLabel: any;
-    vinylcondition: any;
+    recordCondition: any;
   }
