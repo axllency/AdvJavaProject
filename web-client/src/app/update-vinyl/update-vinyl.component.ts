@@ -10,7 +10,8 @@ import { ApiService } from '../services/vinyl.service';
 export class UpdateVinylComponent implements OnInit {
 
   constructor(private vinyService: ApiService) { }
-  vinyl : Vinyl;
+  vinyl = new Vinyl();
+  id: any;
 
   ngOnInit(): void {
   }

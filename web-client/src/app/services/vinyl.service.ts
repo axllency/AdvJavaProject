@@ -7,7 +7,7 @@ import { Vinyl } from './Vinyl';
 export class ApiService {
 
     //Base url
-    url: string = '';
+    url: string = 'http://musicprojectdeployment.us-east-2.elasticbeanstalk.com/music/';
 
 
     constructor(private http: HttpClient) {
