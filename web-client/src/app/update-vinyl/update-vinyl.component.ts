@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { throwError } from 'rxjs';
 import { Vinyl } from '../services/Vinyl';
 import { ApiService } from '../services/vinyl.service';
 
@@ -18,7 +19,9 @@ export class UpdateVinylComponent implements OnInit {
 
   getVinyl(id:any){
     this.vinyService.getVinyl(id).subscribe(data =>{
+      if (data != null){
       this.vinyl = data
+      }
     })
   }
 
