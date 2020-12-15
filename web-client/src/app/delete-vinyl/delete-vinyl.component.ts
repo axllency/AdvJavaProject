@@ -16,6 +16,6 @@ export class DeleteVinylComponent implements OnInit {
   }
 
   deleteVinyl(id:any){
-    this.vinyService.deleteVinyl(id)
+    this.vinyService.deleteVinyl(id).subscribe()
   }
 }

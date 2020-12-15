@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { throwError } from 'rxjs';
 import { Vinyl } from '../services/Vinyl';
 import { ApiService } from '../services/vinyl.service';
 
@@ -10,18 +11,21 @@ import { ApiService } from '../services/vinyl.service';
 export class UpdateVinylComponent implements OnInit {
 
   constructor(private vinyService: ApiService) { }
-  vinyl : Vinyl;
+  vinyl = new Vinyl();
+  id: any;
 
   ngOnInit(): void {
   }
 
   getVinyl(id:any){
     this.vinyService.getVinyl(id).subscribe(data =>{
+      if (data != null){
       this.vinyl = data
+      }
     })
   }
 
   updateVinyl(id:any){
-    this.vinyService.updateVinyl(id,this.vinyl)
+    this.vinyService.updateVinyl(id,this.vinyl).subscribe()
   }
 }

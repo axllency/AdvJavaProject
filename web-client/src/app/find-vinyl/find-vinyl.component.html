@@ -1,20 +1,35 @@
-<div class="album py-5 bg-light">
+<div class="album py-5">
     <div class="container">
         <div class="row">
             <!-- repeat this--> 
             <div class="col-md-4" *ngFor="let v of vinyls">
                 <div class="card mb-4 box-shadow">
-                    <div class="card-body">
-                        <h5 class="card-title">{{v.title}}</h5>
-                        <p class="card-text">Artist: {{v.artist}}</p>
-                        <p class="card-text">Release Date: {{v.releaseDate}}</p>
-                        <p class="card-text">Serial Code: {{v.serial}}</p>
-                        <p class="card-text">Record Label: {{v.recordLabel}}</p>
-                        <p class="card-text">Vinyl Condition: {{v.vinylcondition}}</p>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{v.albumTitle}}</h5>
+                        <small class="text-muted">Id</small>
+                        <p class="card-text">{{v.id}}</p>
+                        <small class="text-muted">Artist</small>
+                        <p class="card-text">{{v.artist}}</p>
+                        <small class="text-muted">Release Date</small>
+                        <p class="card-text">{{v.releaseDate}}</p>
+                        <small class="text-muted">Serial Code</small>
+                        <p class="card-text">{{v.serialCode}}</p>
+                        <small class="text-muted">Record Label</small>
+                        <p class="card-text">{{v.recordLabel}}</p>
+                        <small class="text-muted">Condition</small>
+                        <p class="card-text">{{v.recordCondition}}</p>
                     </div>
                 </div>
             </div>
             <!-- dsfsdf-->
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Add Additional Record</h5>
+                        <a routerLink="/create" class="stretched-link"><i class="far fa-plus-square fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

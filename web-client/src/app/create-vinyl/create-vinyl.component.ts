@@ -16,7 +16,7 @@ export class CreateVinylComponent implements OnInit {
   }
   createVinyl(){
     console.log(this.vinyl)
-    this.vinyService.addVinyl(this.vinyl)
+    this.vinyService.addVinyl(this.vinyl).subscribe();
   }
 
 }

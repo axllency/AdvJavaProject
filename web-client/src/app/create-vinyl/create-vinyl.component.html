@@ -11,7 +11,7 @@
                     <div>
                         <div class="form-group">
                             <label >Vinyl Title</label>
-                            <input type="text" class="form-control" [(ngModel)]="vinyl.title">
+                            <input type="text" class="form-control" [(ngModel)]="vinyl.albumTitle">
                         </div>
                         <div class="form-group">
                             <label >Artist</label>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <label >Serial Code</label>
-                            <input type="text" class="form-control" [(ngModel)]="vinyl.serial">
+                            <input type="text" class="form-control" [(ngModel)]="vinyl.serialCode">
                         </div>
                         <div class="form-group">
                             <label >Record label</label>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Vinly Condition?</label>
-                            <select class="form-control" [(ngModel)]="vinyl.vinylcondition">
+                            <select class="form-control" [(ngModel)]="vinyl.recordCondition">
                                 <option>New</option>
                                 <option>Old</option>
                                 <option>Broken</option>

@@ -17,7 +17,9 @@ export class FindVinylComponent implements OnInit {
   }
   getAllVinyls(){
     this.vinyService.getAllVinyls().subscribe(data =>{
+      if (data !=null){
       this.vinyls = data
+      }
     })
   }
 }
