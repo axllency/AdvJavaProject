@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web-client';
+
+  isUserLoggedIn() {
+    let user = sessionStorage.getItem('token')
+    return !(user === null)
+}
+
+logOut() {
+    sessionStorage.removeItem('token')
+  }
 }

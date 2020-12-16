@@ -14,23 +14,44 @@ export class ApiService {
     }
 
     getAllVinyls(): Observable<Vinyl[]>{
-        return this.http.get<Vinyl[]>(this.url + 'vinyl')
+        let basicString='Basic '+ this.getHeaders()
+        let headers= new HttpHeaders(
+          {Authorization:basicString}
+        );
+        return this.http.get<Vinyl[]>(this.url + 'vinyl',{headers})
     }
     getVinyl(id:any): Observable<Vinyl>{
-        return this.http.get<Vinyl>(this.url+'vinyl/'+id)
+        let basicString='Basic '+ this.getHeaders()
+        let headers= new HttpHeaders(
+          {Authorization:basicString}
+        );
+        return this.http.get<Vinyl>(this.url+'vinyl/'+id,{headers})
     }
     addVinyl(vinyl:Vinyl){
-        const headers = {'Content-Type': 'application/json'}  
+        let basicString='Basic '+ this.getHeaders()
+        let headers= new HttpHeaders(
+          {Authorization:basicString}
+        );
         const body=JSON.stringify(vinyl);
-        return this.http.post<any>(this.url + 'vinyl', body,{'headers':headers})
+        return this.http.post<any>(this.url + 'vinyl', body,{headers})
     }
     updateVinyl(id:any,vinyl:Vinyl){
-        const headers = {'Content-Type': 'application/json'}  
+        let basicString='Basic '+ this.getHeaders()
+        let headers= new HttpHeaders(
+          {Authorization:basicString}
+        );
         const body=JSON.stringify(vinyl);
-        return this.http.put<any>(this.url + 'vinyl/'+id,body,{'headers':headers})
+        return this.http.put<any>(this.url + 'vinyl/'+id,body,{headers})
 
     }
     deleteVinyl(id:any){
-        return this.http.delete<any>(this.url+'vinyl/'+id)
+        let basicString='Basic '+ this.getHeaders()
+        let headers= new HttpHeaders(
+          {Authorization:basicString}
+        );
+        return this.http.delete<any>(this.url+'vinyl/'+id,{headers})
     }
+    getHeaders(){
+        return sessionStorage.getItem('token')
+      }
 }

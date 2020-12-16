@@ -9,6 +9,7 @@ import { DeleteVinylComponent } from './delete-vinyl/delete-vinyl.component';
 import { FindVinylComponent } from './find-vinyl/find-vinyl.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreateVinylComponent,
     UpdateVinylComponent,
     DeleteVinylComponent,
-    FindVinylComponent
+    FindVinylComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,

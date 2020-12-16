@@ -6,6 +6,7 @@
     <a class="p-2 text-dark" routerLink="/delete">Delete</a>
     <a class="p-2 text-dark" routerLink="/find">Find</a>
   </nav>
-  <a class="btn btn-outline-primary" routerLink="">Home</a>
+  <div *ngIf="isUserLoggedIn(); else elseBlock"><a class="btn btn-outline-primary" (click)="logOut()" routerLink="">Logout</a></div>
+  <ng-template #elseBlock><a class="btn btn-outline-primary" routerLink="">Login</a></ng-template>
 </div>
 <router-outlet></router-outlet>
