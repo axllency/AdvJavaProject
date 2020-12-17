@@ -30,7 +30,7 @@ export class ApiService {
     addVinyl(vinyl:Vinyl){
         let basicString='Basic '+ this.getHeaders()
         let headers= new HttpHeaders(
-          {Authorization:basicString}
+          {Authorization:basicString,'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'}
         );
         const body=JSON.stringify(vinyl);
         return this.http.post<any>(this.url + 'vinyl', body,{headers})
@@ -38,7 +38,7 @@ export class ApiService {
     updateVinyl(id:any,vinyl:Vinyl){
         let basicString='Basic '+ this.getHeaders()
         let headers= new HttpHeaders(
-          {Authorization:basicString}
+          {Authorization:basicString,'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'}
         );
         const body=JSON.stringify(vinyl);
         return this.http.put<any>(this.url + 'vinyl/'+id,body,{headers})
