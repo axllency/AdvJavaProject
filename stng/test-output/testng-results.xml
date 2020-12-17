@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-12-17T10:52:58 EST" name="Default suite" finished-at="2020-12-17T10:53:01 EST" duration-ms="3443">
+    <groups>
+    </groups>
+    <test started-at="2020-12-17T10:52:58 EST" name="Default test" finished-at="2020-12-17T10:53:01 EST" duration-ms="3443">
+      <class name="SpotifyTestNG.stng.TestUpdateDelete_01">
+        <test-method signature="addVinyl_WithAuth()[pri:0, instance:SpotifyTestNG.stng.TestUpdateDelete_01@3f56875e]" started-at="2020-12-17T10:52:58 EST" name="addVinyl_WithAuth" finished-at="2020-12-17T10:53:00 EST" duration-ms="1924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addVinyl_WithAuth -->
+        <test-method signature="updateVinyl_NoAuth()[pri:1, instance:SpotifyTestNG.stng.TestUpdateDelete_01@3f56875e]" started-at="2020-12-17T10:53:00 EST" name="updateVinyl_NoAuth" finished-at="2020-12-17T10:53:00 EST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateVinyl_NoAuth -->
+        <test-method signature="updateVinyl_WithAuth()[pri:1, instance:SpotifyTestNG.stng.TestUpdateDelete_01@3f56875e]" started-at="2020-12-17T10:53:00 EST" name="updateVinyl_WithAuth" finished-at="2020-12-17T10:53:00 EST" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateVinyl_WithAuth -->
+        <test-method signature="deleteVinyl_NoAuth()[pri:2, instance:SpotifyTestNG.stng.TestUpdateDelete_01@3f56875e]" started-at="2020-12-17T10:53:00 EST" name="deleteVinyl_NoAuth" finished-at="2020-12-17T10:53:00 EST" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteVinyl_NoAuth -->
+        <test-method signature="deleteVinyl_WithAuth()[pri:3, instance:SpotifyTestNG.stng.TestUpdateDelete_01@3f56875e]" started-at="2020-12-17T10:53:00 EST" name="deleteVinyl_WithAuth" finished-at="2020-12-17T10:53:01 EST" duration-ms="304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteVinyl_WithAuth -->
+        <test-method signature="deleteVinyl_NotExist()[pri:4, instance:SpotifyTestNG.stng.TestUpdateDelete_01@3f56875e]" started-at="2020-12-17T10:53:01 EST" name="deleteVinyl_NotExist" finished-at="2020-12-17T10:53:01 EST" duration-ms="305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteVinyl_NotExist -->
+      </class> <!-- SpotifyTestNG.stng.TestUpdateDelete_01 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
